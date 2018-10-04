@@ -35,7 +35,7 @@ public class Hang {
 
 		if (asterisk.equals(newasterisk)) {
 			count++;
-			hangmanImage();
+			hangmanWrongguesses();
 		} else {
 			asterisk = newasterisk;
 		}
@@ -45,7 +45,7 @@ public class Hang {
 		}
 	}
 	
-	public static void hangmanImage() {
+	public static void hangmanWrongguesses() {
 		if (count == 1) {
 			System.out.println("Wrong guess, you have 6 trys left");
 			
