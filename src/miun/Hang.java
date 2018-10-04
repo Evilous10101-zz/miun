@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Hang {
 	
-	private static String[] words = {"cat", "dog", "computer", "chicken", "word", "coke" };
+	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke" };
 	private static String word = words[(int) (Math.random() * words.length)];
 	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	private static int count = 0;
