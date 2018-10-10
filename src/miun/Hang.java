@@ -15,7 +15,7 @@ public class Hang {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
+		
 		while (count < 5 && asterisk.contains("*")) {
 			System.out.println("Guess any letter in the word");
 			System.out.println(asterisk);
@@ -51,7 +51,7 @@ public class Hang {
 		}
 			//Gives player input that they screwed up, got a letter right or won the game. I might have to lower the amount of tries, it just seems to easy. 7 to 5 for now.
 	}
-	public static void Wrongguess() {
+	public static void Wrongguess()  {
 		
 	{
 		if (count == 1) {
@@ -69,6 +69,7 @@ public class Hang {
 		if (count == 5) {
 			System.out.println("You used all of your tries :[ ");
 			System.out.println("GAME OVER! The word was " + word);
+			
 			System.exit(0);
 			
 				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
