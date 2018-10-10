@@ -36,7 +36,7 @@ public class Hang {
 			//Code to deal with mask above 
 		if (asterisk.equals(newasterisk)) {
 			count++;
-			hangmanWrongguesses();
+			Wrongguess();
 		} else {
 			asterisk = newasterisk;
 		}
@@ -46,7 +46,7 @@ public class Hang {
 		}
 			//Gives player input that they screwed up, got a letter right or won the game. I might have to lower the amount of tries, it just seems to easy. 7 to 5 for now.
 	}
-	public static void hangmanWrongguesses() {
+	public static void Wrongguess() {
 		
 		 
 	{
