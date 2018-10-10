@@ -69,7 +69,6 @@ public class Hang {
 		if (count == 5) {
 			System.out.println("You used all of your tries :[ ");
 			System.out.println("GAME OVER! The word was " + word);
-			
 			System.exit(0);
 			
 				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
