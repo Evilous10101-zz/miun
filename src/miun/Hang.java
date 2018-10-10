@@ -3,12 +3,12 @@ package miun;
 import java.util.Scanner;
 
 public class Hang {
-	//I want to try to get the game to autogenerate a word instead of choosing one of these words. 
+		//I want to try to get the game to autogenerate a word instead of choosing one of these words. 
 	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window" };
 	private static String word = words[(int) (Math.random() * words.length)];
 	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	private static int count = 0;
-	//Code above generates a mask from a random word from the words string
+		//Code above generates a mask from a random word from the words string
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -18,7 +18,7 @@ public class Hang {
 			String guess = sc.next();
 			hang(guess);
 		}
-		//If there is a try left it will ask the user for input
+			//If there is a try left it will ask the user for input
 		sc.close();
 	}
 	
@@ -33,7 +33,7 @@ public class Hang {
 				newasterisk += "*";
 			}
 		}
-//Code to deal with mask above 
+			//Code to deal with mask above 
 		if (asterisk.equals(newasterisk)) {
 			count++;
 			hangmanWrongguesses();
@@ -44,7 +44,7 @@ public class Hang {
 			System.out.println("You win! The word was " + word);
 			System.exit(0);
 		}
-		//Gives player input that they screwed up, got a letter right or won the game.
+			//Gives player input that they screwed up, got a letter right or won the game.
 	}
 	public static void hangmanWrongguesses() {
 		if (count == 1) {
@@ -69,7 +69,7 @@ public class Hang {
 			System.out.println("You used all of your trys");
 			System.out.println("GAME OVER! The word was " + word);
 			System.exit(0); 
-			//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to reset if the user chooses. 
+				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
 		}
 	}
 }
