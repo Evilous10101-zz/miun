@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Hang {
 	
 	private static int MRL;
-	//MRL is digital signature. 
+	//MRL is my digital signature. 
 		//I want to try to get the game to auto-generate a word instead of choosing one of these words. 
 	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
 	private static String word = words[(int) (Math.random() * words.length)];
@@ -47,6 +47,7 @@ public class Hang {
 		if (asterisk.equals(word)) {
 			System.out.println("You win! The word was " + word);
 			System.exit(0);
+			
 		}
 			//Gives player input that they screwed up, got a letter right or won the game. I might have to lower the amount of tries, it just seems to easy. 7 to 5 for now.
 	}
@@ -78,4 +79,7 @@ public class Hang {
 
 	
 }
+
+
+
 
