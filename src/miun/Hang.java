@@ -41,10 +41,10 @@ public class Hang {
 			asterisk = newasterisk;
 		}
 		if (asterisk.equals(word)) {
-			System.out.println("Correct! You win! The word was " + word);
+			System.out.println("You win! The word was " + word);
 			System.exit(0);
 		}
-		//Gives player input that they screwed up, got a letter right or won
+		//Gives player input that they screwed up, got a letter right or won the game.
 	}
 	public static void hangmanWrongguesses() {
 		if (count == 1) {
@@ -63,7 +63,7 @@ public class Hang {
 			System.out.println("Wrong guess, you have 2 trys left");
 		}
 		if (count == 6) {
-			System.out.println("Wrong guess, you have one try left");
+			System.out.println("Wrong guess, you have 1 try left");
 		}
 		if (count == 7) {
 			System.out.println("You used all of your trys");
