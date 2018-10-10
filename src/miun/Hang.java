@@ -48,7 +48,7 @@ public class Hang {
 	}
 	public static void hangmanWrongguesses() {
 		
-		} 
+		 
 	{
 		if (count == 1) {
 			System.out.println("Wrong guess, you have 4 trys left");
@@ -69,5 +69,6 @@ public class Hang {
 				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
 		}
 	}
+}
 }
 
