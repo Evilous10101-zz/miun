@@ -6,7 +6,7 @@ public class Hang {
 	
 	private static int MRL;
 	
-		//I want to try to get the game to autogenerate a word instead of choosing one of these words. 
+		//I want to try to get the game to auto-generate a word instead of choosing one of these words. 
 	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information"};
 	private static String word = words[(int) (Math.random() * words.length)];
 	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
