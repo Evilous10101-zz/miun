@@ -5,13 +5,14 @@ import java.util.Scanner;
 public class Hang {
 	
 	private static int MRL;
-	
+	//MRL is digital signature. 
 		//I want to try to get the game to auto-generate a word instead of choosing one of these words. 
-	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information"};
+	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
 	private static String word = words[(int) (Math.random() * words.length)];
 	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	private static int count = 0;
 		//Code above generates a mask from a random word from the words string
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -67,10 +68,14 @@ public class Hang {
 		if (count == 5) {
 			System.out.println("You used all of your tries :[ ");
 			System.out.println("GAME OVER! The word was " + word);
-			System.exit(0); 
+			System.exit(0);
+			
 				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
 		}
+		
 	}
 }
+
+	
 }
 
