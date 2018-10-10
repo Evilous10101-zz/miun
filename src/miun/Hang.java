@@ -3,6 +3,9 @@ package miun;
 import java.util.Scanner;
 
 public class Hang {
+	
+	private static int MRL;
+	
 		//I want to try to get the game to autogenerate a word instead of choosing one of these words. 
 	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information"};
 	private static String word = words[(int) (Math.random() * words.length)];
@@ -48,22 +51,21 @@ public class Hang {
 	}
 	public static void Wrongguess() {
 		
-		 
 	{
 		if (count == 1) {
-			System.out.println("Wrong guess, you have 4 trys left");
+			System.out.println("Wrong guess, you have 4 tries left");
 		}
 		if (count == 2) {
-			System.out.println("Wrong guess, you have 3 trys left");
+			System.out.println("Wrong guess, you have 3 tries left");
 		}
 		if (count == 3) {
-			System.out.println("Wrong guess, you have 2 trys left");
+			System.out.println("Wrong guess, you have 2 tries left");
 		}
 		if (count == 4) {
-			System.out.println("Wrong guess, you have 1 try left");
+			System.out.println("Wrong guess, you have 1 tries left");
 		}
 		if (count == 5) {
-			System.out.println("You used all of your trys");
+			System.out.println("You used all of your tries :[ ");
 			System.out.println("GAME OVER! The word was " + word);
 			System.exit(0); 
 				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
