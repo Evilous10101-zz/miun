@@ -3,6 +3,8 @@ package miun;
 import java.util.Scanner;
 
 public class Hang {
+	static Scanner kbd = new Scanner (System.in);
+	
 	
 	private static int MRL;
 	//MRL is my digital signature. 
@@ -46,8 +48,63 @@ public class Hang {
 		}
 		if (asterisk.equals(word)) {
 			System.out.println("You win! The word was " + word);
-			System.exit(0);
 			
+			String decision;
+
+			boolean yn = true;
+			while(yn)
+			{
+			 
+
+			    System.out.println("Do you want to play again, please enter yes or no");
+			    decision = kbd.nextLine();
+
+
+			    switch(decision)
+			    {
+			        case "yes":
+			            yn = true;
+			            String[] args = new String[0]; // Or String[] args = {};
+	     		           main(args);
+			            break;
+
+			        case "no":
+			            yn = false;
+			            System.exit(0);
+			            break;
+
+			        default:
+			            System.out.println("please enter again ");
+			            boolean repeat = true;
+
+			            while (repeat)
+			            {
+			                System.out.println("please enter yes or no again : yes or no");
+			                decision = kbd.nextLine();
+
+			                switch (decision)
+			                {
+			                    case "yes":
+			                        yn = repeat = true;
+			                        String[] argsi = new String[0]; // Or String[] argsi = {};
+			     		           main(argsi);
+			                        break;
+
+			                    case "no":
+			                        yn = repeat = false;
+			                        System.exit(0);
+			                        break;
+			                }
+			            }
+			            
+			    }
+			    
+			    
+			
+			
+			
+			
+		}
 		}
 			//Gives player input that they screwed up, got a letter right or won the game. I might have to lower the amount of tries, it just seems to easy. 7 to 5 for now.
 	}
@@ -69,7 +126,64 @@ public class Hang {
 		if (count == 5) {
 			System.out.println("You used all of your tries :[ ");
 			System.out.println("GAME OVER! The word was " + word);
-			System.exit(0);
+			Scanner input = new Scanner(System.in);
+			String decision;
+
+			boolean yn = true;
+			while(yn)
+			{
+			 
+
+			    System.out.println("Do you want to play again, please only enter yes or no");
+			    decision = kbd.nextLine();
+
+
+			    switch(decision)
+			    {
+			        case "yes":
+			            yn = true;
+			            String[] args = new String[0]; // Or String[] args = {};
+	     		           main(args);
+			            break;
+
+			        case "no":
+			            yn = false;
+			            System.exit(0);
+			            break;
+
+			        default:
+			            System.out.println("please enter again ");
+			            boolean repeat = true;
+
+			            while (repeat)
+			            {
+			                System.out.println("please enter yes or no again : yes or no");
+			                decision = kbd.nextLine();
+
+			                switch (decision)
+			                {
+			                    case "yes":
+			                        yn = repeat = true;
+			                        String[] argsi = new String[0]; // Or String[] argsi = {};
+			     		           main(argsi);
+			                        break;
+
+			                    case "no":
+			                        yn = repeat = false;
+			                        System.exit(0);
+			                        break;
+			                }
+			            }
+			            
+			    }
+			    
+			    
+			
+			
+			
+			
+		}
+		    }
 			
 				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
 		}
@@ -78,7 +192,9 @@ public class Hang {
 }
 
 	
-}
+
+
+
 
 
 
