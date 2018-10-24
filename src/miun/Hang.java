@@ -1,5 +1,6 @@
 package miun;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Hang {
@@ -48,67 +49,15 @@ public class Hang {
 		}
 		if (asterisk.equals(word)) {
 			System.out.println("You win! The word was " + word);
-			
-			String decision;
-
-			boolean yn = true;
-			while(yn)
-			{
-			 
-
-			    System.out.println("Do you want to play again, please enter yes or no");
-			    decision = kbd.nextLine();
-
-
-			    switch(decision)
-			    {
-			        case "yes":
-			            yn = true;
-			            String[] args = new String[0]; // Or String[] args = {};
-	     		           main(args);
-			            break;
-
-			        case "no":
-			            yn = false;
-			            System.exit(0);
-			            break;
-
-			        default:
-			            System.out.println("please enter again ");
-			            boolean repeat = true;
-
-			            while (repeat)
-			            {
-			                System.out.println("please enter yes or no again : yes or no");
-			                decision = kbd.nextLine();
-
-			                switch (decision)
-			                {
-			                    case "yes":
-			                        yn = repeat = true;
-			                        String[] argsi = new String[0]; // Or String[] argsi = {};
-			     		           main(argsi);
-			                        break;
-
-			                    case "no":
-			                        yn = repeat = false;
-			                        System.exit(0);
-			                        break;
-			                }
-			            }
-			            
-			    }
-			    
-			    
-			
+			System.out.println("do you want to play again? ");
 			
 			
 			
 		}
 		}
 			//Gives player input that they screwed up, got a letter right or won the game. I might have to lower the amount of tries, it just seems to easy. 7 to 5 for now.
-	}
-	public static void Wrongguess()  {
+	
+	public static void Wrongguess()   {
 		
 	{
 		if (count == 1) {
@@ -142,8 +91,8 @@ public class Hang {
 			    {
 			        case "yes":
 			            yn = true;
-			            String[] args = new String[0]; // Or String[] args = {};
-	     		           main(args);
+			            
+			            System.exit(0);
 			            break;
 
 			        case "no":
@@ -164,8 +113,8 @@ public class Hang {
 			                {
 			                    case "yes":
 			                        yn = repeat = true;
-			                        String[] argsi = new String[0]; // Or String[] argsi = {};
-			     		           main(argsi);
+			                       
+			                        System.exit(0);
 			                        break;
 
 			                    case "no":
