@@ -134,7 +134,7 @@ public class Hang {
 		}
 		    }
 			
-				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. 
+				//Tells player that they got a letter wrong and then tells the user the word when they lose. It also kills the game when lost. I want to add in a way to get it to restart the game if the user wants to. whenever I try the code kills itself. I might have to redo a good amount of code for this.
 		}
 		
 	}
