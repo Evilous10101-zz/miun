@@ -2,22 +2,54 @@ package miun;
 
 import java.io.IOException;
 import java.util.Scanner;
+import miun.Hang404;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 
 public class Hang {
 	
-	static Scanner kbd = new Scanner (System.in);
+	 
+	
+	public static Scanner kbd = new Scanner (System.in);
 	
 	
-	private static int MRL;
+	public static int MRL;
+	
 	//MRL is my digital signature. 
 		//I want to try to get the game to auto-generate a word instead of choosing one of these words. 
-	private static String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
-	private static String word = words[(int) (Math.random() * words.length)];
-	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
-	private static int count = 0;
+	public static  String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
+	public static  String word = words[(int) (Math.random() * words.length)];
+	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
+	public static int count = 0;
 		//Code above generates a mask from a random word from the words string
 	
-	public static void main(String[] args) {
+	
+	public static void gatherdata() throws Exception{
+		File file = new File("storage"); 
+		  
+		 BufferedReader br = new BufferedReader(new FileReader(file)); 
+		  
+		  String st; 
+		  while ((st = br.readLine()) != null) 
+		    System.out.println(st); 
+		 
+		  
+		  BufferedReader brTest = new BufferedReader(new FileReader("storage"));
+		    String test = brTest .readLine();
+		   System.out.println("Firstline is : " +  test);
+		   test = word;
+		   word = words[(int) (words.length)];
+			String asterisk = new String(new char[word.length()]).replace("\0", "*");
+			
+	}
+	
+	
+	
+	public static void main(String[] args) throws Exception {
+		//Hang.gatherdata();
 		Scanner sc = new Scanner(System.in);
 		
 		while (count < 5 && asterisk.contains("*")) {
@@ -30,7 +62,8 @@ public class Hang {
 		sc.close();
 	}
 	
-	public static void hang(String guess) {
+	public static void hang(String guess) throws Exception {
+		//Hang.gatherdata();
 		String newasterisk = "";
 		for (int i = 0; i < word.length(); i++) {
 			if (word.charAt(i) == guess.charAt(0)) {
@@ -67,9 +100,9 @@ public class Hang {
 			    switch(decision)
 			    {
 			        case "yes":
-			            yn = true;
+			            yn = false;
+			            Hang404.restart();
 			            
-			            System.exit(0);
 			            break;
 
 			        case "no":
@@ -89,9 +122,9 @@ public class Hang {
 			                switch (decision)
 			                {
 			                    case "yes":
-			                        yn = repeat = true;
+			                        yn = repeat = false;
 			                       
-			                        System.exit(0);
+			                        Hang404.restart();
 			                        break;
 
 			                    case "no":
@@ -114,8 +147,8 @@ public class Hang {
 		}
 			//Gives player input that they screwed up, got a letter right or won the game. I might have to lower the amount of tries, it just seems to easy. 7 to 5 for now.
 	
-	public static void Wrongguess()   {
-		
+	public static void Wrongguess() throws Exception   {
+		//Hang.gatherdata();
 	{
 		if (count == 1) {
 			System.out.println("Wrong guess, you have 4 tries left");
@@ -147,9 +180,9 @@ public class Hang {
 			    switch(decision)
 			    {
 			        case "yes":
-			            yn = true;
+			            yn = false;
 			            
-			            System.exit(0);
+			            Hang404.restart();
 			            break;
 
 			        case "no":
@@ -169,9 +202,9 @@ public class Hang {
 			                switch (decision)
 			                {
 			                    case "yes":
-			                        yn = repeat = true;
+			                        yn = repeat = false;
 			                       
-			                        System.exit(0);
+			                        Hang404.restart();
 			                        break;
 
 			                    case "no":
