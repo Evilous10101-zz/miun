@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Hang {
+	
 	static Scanner kbd = new Scanner (System.in);
 	
 	
@@ -51,7 +52,63 @@ public class Hang {
 			System.out.println("You win! The word was " + word);
 			System.out.println("do you want to play again? ");
 			
+			Scanner input = new Scanner(System.in);
+			String decision;
+
+			boolean yn = true;
+			while(yn)
+			{
+			 
+
+			    System.out.println("Do you want to play again, please only enter yes or no");
+			    decision = kbd.nextLine();
+
+
+			    switch(decision)
+			    {
+			        case "yes":
+			            yn = true;
+			            
+			            System.exit(0);
+			            break;
+
+			        case "no":
+			            yn = false;
+			            System.exit(0);
+			            break;
+
+			        default:
+			            System.out.println("please enter again ");
+			            boolean repeat = true;
+
+			            while (repeat)
+			            {
+			                System.out.println("please enter yes or no again : yes or no");
+			                decision = kbd.nextLine();
+
+			                switch (decision)
+			                {
+			                    case "yes":
+			                        yn = repeat = true;
+			                       
+			                        System.exit(0);
+			                        break;
+
+			                    case "no":
+			                        yn = repeat = false;
+			                        System.exit(0);
+			                        break;
+			                }
+			            }
+			            
+			    }
+			    
+			    
 			
+			
+			
+			
+		}
 			
 		}
 		}
