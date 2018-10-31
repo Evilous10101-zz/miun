@@ -5,6 +5,8 @@ import miun.Hang;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 public class Hang404 {
 	
@@ -19,7 +21,7 @@ public static void restart() throws Exception {
 	Hang count = new Hang();
 	Hang.gatherdata();
 	
-
+	
 			
 			Hang.count = 0;
 			

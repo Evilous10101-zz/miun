@@ -1,57 +1,93 @@
 package miun;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import miun.Hang404;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
-
+import java.io.FileWriter;
 public class Hang {
 	
-	 
+	private static void simpleListSample()
+	{
+		
+		List<String> strings = new ArrayList<String>();
+		
+		
+		strings.add("These are your hints (in word order):");
+		strings.add("a pet");
+		strings.add("a pet");
+		strings.add("an incest");
+		strings.add("a farm animal");
+		strings.add("a word");
+		strings.add("a drink");
+		strings.add("a game");
+		strings.add("a programing language");
+		strings.add("an object in a house");
+		strings.add("a word");
+		strings.add("an application");
+		strings.add("a color");
+		strings.add("a food");
+		strings.add("an object in a classroom");
+		strings.add("knowlegde");
+		strings.add("a food");
+		strings.add("a number");
+		strings.add("an aplication");
+		strings.add("a animal");
+		strings.add("point of view");
+		for(String str : strings)
+		{
+			System.out.println(str); }
+		}
 	
 	public static Scanner kbd = new Scanner (System.in);
-	
+	public static  String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
+	public static  String word = words[(int) (Math.random() * words.length)];
+	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	
 	public static int MRL;
 	
 	//MRL is my digital signature. 
-		//I want to try to get the game to auto-generate a word instead of choosing one of these words. 
-	public static  String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
-	public static  String word = words[(int) (Math.random() * words.length)];
-	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
+		//I want to try to get the game to get the data from the storage file instead of the string
+	
 	public static int count = 0;
 		//Code above generates a mask from a random word from the words string
 	
-	
+	//gatherdata();
 	public static void gatherdata() throws Exception{
 		File file = new File("storage"); 
-		  
+		
 		 BufferedReader br = new BufferedReader(new FileReader(file)); 
 		  
 		  String st; 
 		  while ((st = br.readLine()) != null) 
 		    System.out.println(st); 
 		 
+		 
+		  
 		  
 		  BufferedReader brTest = new BufferedReader(new FileReader("storage"));
 		    String test = brTest .readLine();
-		   System.out.println("Firstline is : " +  test);
+		    System.out.println(test);
+		   
 		   test = word;
-		   word = words[(int) (words.length)];
+		   word = words[word.length()];
 			String asterisk = new String(new char[word.length()]).replace("\0", "*");
 			
 	}
 	
-	
+	//gatherdata();
 	
 	public static void main(String[] args) throws Exception {
 		//Hang.gatherdata();
 		Scanner sc = new Scanner(System.in);
-		
+		Hang.simpleListSample();
 		while (count < 5 && asterisk.contains("*")) {
 			System.out.println("Guess any letter in the word");
 			System.out.println(asterisk);
