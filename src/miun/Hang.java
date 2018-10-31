@@ -21,25 +21,25 @@ public class Hang {
 		
 		
 		strings.add("These are your hints (in word order):");
-		strings.add("a pet");
-		strings.add("a pet");
+		strings.add(" pet");
+		strings.add(" pet");
 		strings.add("an incest");
-		strings.add("a farm animal");
-		strings.add("a word");
-		strings.add("a drink");
-		strings.add("a game");
-		strings.add("a programing language");
+		strings.add(" farm animal");
+		strings.add(" word");
+		strings.add(" drink");
+		strings.add(" game");
+		strings.add(" programing language");
 		strings.add("an object in a house");
-		strings.add("a word");
+		strings.add(" word");
 		strings.add("an application");
-		strings.add("a color");
-		strings.add("a food");
+		strings.add(" color");
+		strings.add(" food");
 		strings.add("an object in a classroom");
 		strings.add("knowlegde");
-		strings.add("a food");
-		strings.add("a number");
+		strings.add(" food");
+		strings.add(" number");
 		strings.add("an aplication");
-		strings.add("a animal");
+		strings.add(" animal");
 		strings.add("point of view");
 		for(String str : strings)
 		{
