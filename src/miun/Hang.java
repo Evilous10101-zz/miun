@@ -5,15 +5,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import miun.Hang404;
-
+import miun.Random;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FileWriter;
 public class Hang {
-	
+	 public  BufferedReader fR;
+	 
+	    public  void openRead(String storage) throws IOException, FileNotFoundException {
+	        try {
+	            fR = new BufferedReader(new FileReader(storage));
+	        } catch (IOException ex) {
+	            System.out.println("Error opening file: " + ex);
+	        }
+	    }
+	    
 	private static void simpleListSample()
 	{
 		
@@ -45,7 +55,7 @@ public class Hang {
 		{
 			System.out.println(str); }
 		}
-	
+	//IOException ex
 	public static Scanner kbd = new Scanner (System.in);
 	public static  String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
 	public static  String word = words[(int) (Math.random() * words.length)];
@@ -69,7 +79,7 @@ public class Hang {
 		  while ((st = br.readLine()) != null) 
 		    System.out.println(st); 
 		 
-		 
+			 
 		  
 		  
 		  BufferedReader brTest = new BufferedReader(new FileReader("storage"));
@@ -85,6 +95,7 @@ public class Hang {
 	//gatherdata();
 	
 	public static void main(String[] args) throws Exception {
+		
 		//Hang.gatherdata();
 		Scanner sc = new Scanner(System.in);
 		Hang.simpleListSample();
