@@ -17,3 +17,10 @@ public class Random {
 	    Hang404 restart = new Hang404();
 	    
 }
+
+//This part here is useless since I put it on Hang
+//If it hates being on Hang then I will use this instead
+//right now String[] hates using buffered reader.
+//Only for word length
+//no idea why
+//I will be half way done one this bug is done

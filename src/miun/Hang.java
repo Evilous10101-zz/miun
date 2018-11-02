@@ -14,7 +14,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FileWriter;
 public class Hang {
-	 public  BufferedReader fR;
+	 public static  BufferedReader fR;
 	 
 	    public  void openRead(String storage) throws IOException, FileNotFoundException {
 	        try {
@@ -57,7 +57,7 @@ public class Hang {
 		}
 	//IOException ex
 	public static Scanner kbd = new Scanner (System.in);
-	public static  String[] words = {"cat", "dog", "spider", "chicken", "word", "coke","hangman","game","java","window", "a", "chrome", "black", "board", "information", "cake", "twenty", "eclipse", "zebra", "perspective"};
+	public static  BufferedReader words = fR;
 	public static  String word = words[(int) (Math.random() * words.length)];
 	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	
@@ -81,14 +81,7 @@ public class Hang {
 		 
 			 
 		  
-		  
-		  BufferedReader brTest = new BufferedReader(new FileReader("storage"));
-		    String test = brTest .readLine();
-		    System.out.println(test);
-		   
-		   test = word;
-		   word = words[word.length()];
-			String asterisk = new String(new char[word.length()]).replace("\0", "*");
+		 
 			
 	}
 	
