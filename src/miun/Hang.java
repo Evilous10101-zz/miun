@@ -1,12 +1,15 @@
 package miun;
 
 import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import miun.Hang404;
 import miun.Random;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -58,6 +61,10 @@ public class Hang {
 	//IOException ex
 	public static Scanner kbd = new Scanner (System.in);
 	public static  BufferedReader words = fR;
+	
+	BufferedReader aString = fR;
+	Reader inFromUser = new StringReader(word);
+	
 	public static  String word = words[(int) (Math.random() * words.length)];
 	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	
