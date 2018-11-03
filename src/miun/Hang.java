@@ -68,7 +68,7 @@ public class Hang {
 	
 	BufferedReader aString = fR;
 	Reader inFromUser = new StringReader(word);
-	
+	//no idea how to fix this. 
 	public static  String word = words[(int) (Math.random() * words.length)];
 	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	
@@ -83,18 +83,14 @@ public class Hang {
 	//gatherdata();
 	public static void gatherdata() throws Exception{
 		File file = new File("storage"); 
-		
+		//redundant code which does nothing new
+		//might be removed
 		 BufferedReader br = new BufferedReader(new FileReader(file)); 
 		  
 		  String st; 
 		  while ((st = br.readLine()) != null) 
 		    System.out.println(st); 
-		 
-			 
-		  
-		 
-			
-	}
+		 }
 	
 	//gatherdata();
 	
