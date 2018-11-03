@@ -1,6 +1,7 @@
 package miun;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -67,9 +68,6 @@ public class Hang {
 	
 	BufferedReader aString = fR;
 	Reader inFromUser = new StringReader(word);
-	
-	
-	
 	
 	public static  String word = words[(int) (Math.random() * words.length)];
 	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
@@ -160,6 +158,13 @@ public class Hang {
 
 			        case "no":
 			            yn = false;
+			            try (PrintWriter out = new PrintWriter("output.txt")) {
+			        	    out.println(word);
+			        	    out.println(asterisk);
+			        	    out.println(count);
+			        	    out.println(words);
+			        	    out.println(fR);
+			            }
 			            System.exit(0);
 			            break;
 
@@ -182,6 +187,13 @@ public class Hang {
 
 			                    case "no":
 			                        yn = repeat = false;
+			                        try (PrintWriter out = new PrintWriter("output.txt")) {
+			                    	    out.println(word);
+			                    	    out.println(asterisk);
+			                    	    out.println(count);
+			                    	    out.println(words);
+			                    	    out.println(fR);
+			                    	}
 			                        System.exit(0);
 			                        break;
 			                }
@@ -240,6 +252,13 @@ public class Hang {
 
 			        case "no":
 			            yn = false;
+			            try (PrintWriter out = new PrintWriter("output.txt")) {
+			        	    out.println(word);
+			        	    out.println(asterisk);
+			        	    out.println(count);
+			        	    out.println(words);
+			        	    out.println(fR);
+			        	}
 			            System.exit(0);
 			            break;
 
@@ -262,6 +281,13 @@ public class Hang {
 
 			                    case "no":
 			                        yn = repeat = false;
+			                        try (PrintWriter out = new PrintWriter("output.txt")) {
+			                    	    out.println(word);
+			                    	    out.println(asterisk);
+			                    	    out.println(count);
+			                    	    out.println(words);
+			                    	    out.println(fR);
+			                    	}
 			                        System.exit(0);
 			                        break;
 			                }

@@ -14,7 +14,7 @@ public class Hang404 {
 	
 	
 public static void restart() throws Exception {
-	//goes back to the start of the game
+	//goes back to the start of the game, also makes output.txt and writes info on how many tries, if you won, and how much you got right 
 	System.out.println("test to see if this works");
 	Hang words = new Hang();
 	
