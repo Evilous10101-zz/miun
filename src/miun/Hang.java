@@ -6,6 +6,9 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import org.omg.CORBA_2_3.ORB;
+
 import miun.Hang404;
 import miun.Random;
 import java.io.BufferedReader;
@@ -64,6 +67,9 @@ public class Hang {
 	
 	BufferedReader aString = fR;
 	Reader inFromUser = new StringReader(word);
+	
+	
+	
 	
 	public static  String word = words[(int) (Math.random() * words.length)];
 	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");

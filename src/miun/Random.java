@@ -15,7 +15,7 @@ public class Random {
 	    }
 	
 	    Hang404 restart = new Hang404();
-	    
+	   
 }
 
 //This part here is useless since I put it on Hang
