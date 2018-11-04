@@ -68,8 +68,10 @@ public class Hang {
 	
 	BufferedReader aString = fR;
 	Reader inFromUser = new StringReader(word);
-	//no idea how to fix this. 
-	public static  String word = words[(int) (Math.random() * words.length)];
+	
+	public static String word = ((CharSequence) words).length();
+	
+	//public static  String word = words[(int) (Math.random() * words.length)];
 	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	
 	public static int MRL;
