@@ -69,6 +69,8 @@ public class Hang {
 	BufferedReader aString = fR;
 	Reader inFromUser = new StringReader(word);
 	
+	
+	
 	public static String word = ((CharSequence) words).length();
 	
 	//public static  String word = words[(int) (Math.random() * words.length)];
