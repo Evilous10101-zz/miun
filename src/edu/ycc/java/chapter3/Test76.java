@@ -23,7 +23,7 @@ public class Test76 {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void run() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -92,7 +92,9 @@ public class Test76 {
 		btnCreateAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("your account has been created. remember your username and password");
-				//edu.ycc.java.chapter3.test;
+			
+				
+				
 			}
 		});
 		btnCreateAccount.setBounds(282, 227, 142, 23);
@@ -101,6 +103,11 @@ public class Test76 {
 		chckbxDoYouAccept = new JCheckBox("Do you accept the terms of agreement?");
 		chckbxDoYouAccept.setBounds(32, 191, 265, 23);
 		frame.getContentPane().add(chckbxDoYouAccept);
+	}
+
+	protected static void close() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
