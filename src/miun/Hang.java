@@ -69,14 +69,15 @@ public class Hang {
 	public static  BufferedReader words = fR;
 	
 	BufferedReader aString = fR;
+	private static String word;
 	Reader inFromUser = new StringReader(word);
 	
 	
 	
-	public static String word = ((CharSequence) words).length();
-	
+	// public static String word = ((CharSequence) words).length();
+	//word = new word.length();
 	//public static  String word = words[(int) (Math.random() * words.length)];
-	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
+	public static String asterisk = new String(new char[((CharSequence) word).length()]).replace("\0", "*");
 	
 	public static int MRL;
 	
@@ -118,11 +119,11 @@ public class Hang {
 	public static void hang(String guess) throws Exception {
 		//Hang.gatherdata();
 		String newasterisk = "";
-		for (int i = 0; i < word.length(); i++) {
-			if (word.charAt(i) == guess.charAt(0)) {
+		for (int i = 0; i < ((CharSequence) word).length(); i++) {
+			if (((CharSequence) word).charAt(i) == guess.charAt(0)) {
 				newasterisk += guess.charAt(0);
 			} else if (asterisk.charAt(i) != '*') {
-				newasterisk += word.charAt(i);
+				newasterisk += ((CharSequence) word).charAt(i);
 			} else {
 				newasterisk += "*";
 			}
