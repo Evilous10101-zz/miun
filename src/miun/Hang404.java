@@ -23,17 +23,20 @@ public static void restart() throws Exception {
 	Hang count = new Hang();
 	Hang.gatherdata();
 	Hang fR = new Hang();
-	
+	Hang losses = new Hang();
+	Hang wins = new Hang();
 	try (PrintWriter out = new PrintWriter("output.txt")) {
-	    out.println(word);
-	    out.println(asterisk);
-	    out.println(count);
+	    out.println("This is the word you have" + word);
+	    out.println("This shows asterisks" + asterisk);
+	    out.println("This shows how many trys you used" + count);
 	    out.println(words);
 	    out.println(fR);
+	    out.println("this is the losses you have " + losses);
+	    out.println("This is the wins you have " + wins);
 	}
 			
 			Hang.count = 0;
-			
+			//sets trys back to zero then goes make to main
 	Hang.main(null);
 }
 	

@@ -31,12 +31,14 @@ public class Hang {
 	        }
 	    }
 	    
+	    public static int wins = 0;
+	    public static int losses = 0;
 	private static void simpleListSample()
 	{
 		
 		List<String> strings = new ArrayList<String>();
-		
-		
+		strings.add("these are the ammount of wins you have" + wins);
+		strings.add("These are the losses you have" + losses);
 		strings.add("These are your hints (in word order):");
 		strings.add(" pet");
 		strings.add(" pet");
@@ -135,7 +137,7 @@ public class Hang {
 		if (asterisk.equals(word)) {
 			System.out.println("You win! The word was " + word);
 			System.out.println("do you want to play again? ");
-			
+			Integer wins = new Integer(1);
 			Scanner input = new Scanner(System.in);
 			String decision;
 
@@ -232,7 +234,7 @@ public class Hang {
 			System.out.println("GAME OVER! The word was " + word);
 			Scanner input = new Scanner(System.in);
 			String decision;
-
+			Integer losses = new Integer(1);
 			boolean yn = true;
 			while(yn)
 			{
