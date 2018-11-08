@@ -33,6 +33,7 @@ public static void restart() throws Exception {
 	    out.println(fR);
 	    out.println("this is the losses you have " + losses);
 	    out.println("This is the wins you have " + wins);
+	    
 	}
 			
 			Hang.count = 0;
