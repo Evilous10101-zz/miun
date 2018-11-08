@@ -24,6 +24,7 @@ public class test {
 
 	/**
 	 * Launch the application.
+	 * @wbp.parser.entryPoint
 	 */
 	public static void main(String[] args) {
 		restart:
@@ -41,6 +42,7 @@ public class test {
 
 	/**
 	 * Create the application.
+	 * @wbp.parser.entryPoint
 	 */
 	public test() {
 		initialize();
@@ -60,6 +62,14 @@ public class test {
 		btnSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Thank you for your information. Your will be logged in shortly");
+				//if ()
+				//{
+				
+				//}
+				//else
+				//{
+					
+				//}
 				System.exit(0);
 				
 			}

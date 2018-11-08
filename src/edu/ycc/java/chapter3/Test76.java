@@ -1,5 +1,6 @@
 package edu.ycc.java.chapter3;
 
+import java.awt.Desktop;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,7 +9,12 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.net.URL;
 import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 
 public class Test76 {
 
@@ -20,6 +26,8 @@ public class Test76 {
 	private JButton btnCreateAccount;
 	private JCheckBox chckbxDoYouAccept;
 test restart = new test();
+private JButton btnLinkToThe;
+private final Action action = new SwingAction();
 	/**
 	 * Launch the application.
 	 */
@@ -66,12 +74,12 @@ test restart = new test();
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(92, 33, 86, 20);
+		textField_1.setBounds(92, 36, 86, 20);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(92, 64, 86, 20);
+		textField_2.setBounds(92, 67, 86, 20);
 		frame.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -91,15 +99,19 @@ test restart = new test();
 		btnCreateAccount = new JButton("Create account");
 		btnCreateAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("your account has been created. Please write down your username and password");
-			System.out.println("please restart the application to enter your account");
+				System.out.println("Your account has been created. Please write down your username and password");
+			System.out.println("Please restart the application to enter your account");
+			
+			Gathering.gath();
+			
 			try {
-				System.out.println("We are giving you 20 seconds to write down your username and password before restarting tha application");
-				Thread.sleep(20000);
+				System.out.println("We are giving you 10 seconds to write down your username and password before restarting tha application");
+				Thread.sleep(10000);
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 				
 			}
+			System.out.println("Restart in progress");
 			System.exit(0);	
 				
 			}
@@ -110,6 +122,19 @@ test restart = new test();
 		chckbxDoYouAccept = new JCheckBox("Do you accept the terms of agreement?");
 		chckbxDoYouAccept.setBounds(32, 191, 265, 23);
 		frame.getContentPane().add(chckbxDoYouAccept);
+		
+		btnLinkToThe = new JButton("The terms of agreement");
+		btnLinkToThe.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+				    Desktop.getDesktop().browse(new URL("http://www.google.com").toURI());
+				} catch (Exception a) {}
+			}
+		});
+		btnLinkToThe.setBounds(32, 162, 216, 23);
+		frame.getContentPane().add(btnLinkToThe);
 	}
 
 	protected static void close() {
@@ -117,4 +142,12 @@ test restart = new test();
 		
 	}
 
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+		}
+	}
 }
