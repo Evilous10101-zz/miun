@@ -26,6 +26,7 @@ public class test {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		restart:
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

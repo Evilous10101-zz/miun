@@ -19,7 +19,7 @@ public class Test76 {
 	private JTextField textField_3;
 	private JButton btnCreateAccount;
 	private JCheckBox chckbxDoYouAccept;
-
+test restart = new test();
 	/**
 	 * Launch the application.
 	 */
@@ -91,9 +91,16 @@ public class Test76 {
 		btnCreateAccount = new JButton("Create account");
 		btnCreateAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("your account has been created. remember your username and password");
-			
+				System.out.println("your account has been created. Please write down your username and password");
+			System.out.println("please restart the application to enter your account");
+			try {
+				System.out.println("We are giving you 20 seconds to write down your username and password before restarting tha application");
+				Thread.sleep(20000);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
 				
+			}
+			System.exit(0);	
 				
 			}
 		});
